@@ -1,6 +1,10 @@
 .DS_Store
 node_modules
 build
+.idea
+
 .env
+keypair.pem
+publickey.crt
 
 db/database.sqlite3
