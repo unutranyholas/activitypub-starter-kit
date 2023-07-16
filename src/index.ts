@@ -35,22 +35,6 @@ app.get("/.well-known/webfinger", async (req, res) => {
 
 app.use("/admin", admin).use(activitypub);
 
-app.use("/", (_req, res) => {
-  // Simple HTML page to test the server.
-  res.contentType("text/html").send(`
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <title>My Activity Pub project will be here</title>
-      </head>
-      <body>
-        <h1>My Activity Pub project will be here</h1>
-      </body>
-    </html>
-  `);
-  res.end();
-});
-
 app.listen(PORT, () => {
   console.log(`Dumbo listening on port ${PORT}…`);
 });
