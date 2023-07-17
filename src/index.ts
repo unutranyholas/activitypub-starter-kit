@@ -1,9 +1,9 @@
 import express from "express";
 import morgan from "morgan";
 
-import { ACCOUNT, HOSTNAME, PORT } from "./env.js";
-import { activitypub } from "./activitypub.js";
-import { admin } from "./admin.js";
+import {ACCOUNT, HOSTNAME, PORT} from "./env.js";
+import {activitypub} from "./activitypub.js";
+import {admin} from "./admin.js";
 
 const app = express();
 
