@@ -5,6 +5,8 @@ import {ACCOUNT, HOSTNAME, PORT} from "./env.js";
 import {activitypub} from "./activitypub.js";
 import {admin} from "./admin.js";
 
+import ViteExpress from "vite-express";
+
 const app = express();
 
 app.set("actor", `https://${HOSTNAME}/${ACCOUNT}`);
@@ -35,7 +37,5 @@ app.get("/.well-known/webfinger", async (req, res) => {
 
 app.use("/admin", admin).use(activitypub);
 
-app.listen(PORT, () => {
-  console.log(`Dumbo listening on port ${PORT}…`);
-  // Redeploy
-});
+ViteExpress.config({ inlineViteConfig: {} });
+ViteExpress.listen(app, Number(PORT), () => console.log(`Server is listening on ${PORT}...`));
