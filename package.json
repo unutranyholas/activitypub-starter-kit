@@ -5,9 +5,9 @@
   "main": "./build/index.js",
   "type": "module",
   "scripts": {
-    "dev": "ts-node --esm src/index.ts",
-    "build": "tsc",
-    "start": "node build/index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "",
   "license": "ISC",
